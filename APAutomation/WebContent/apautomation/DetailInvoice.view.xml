@@ -1,0 +1,159 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:layout="sap.ui.layout" controllerName="apautomation.DetailInvoice"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false" class="sapUiStdPage">
+		<content>
+			<Toolbar id="deliveryTblToolba1r" class="boxToolBar">
+				<content>
+					<Button id="edit" text="Edit" press="onEdit"
+						type="Emphasized"  class ="editClass"/>
+						<Button id="submit" text="Submit" press="onSubmit"
+						type="Emphasized" />
+					<Button id="approve" text='Approve' type="Emphasized"
+						press="onApprove" />
+					<Button id="manual" text="Manual Process" 
+						type="Emphasized" press="onmanualProcess" />
+					<Button id="dispute" text="Dispute" type="Emphasized"
+						press="onDispute" />
+				</content>
+			</Toolbar>
+			<VBox class="BoxClassMargin">
+				<IconTabBar id="iconTabBar" expandable="false"
+					showSelection="false">
+					<items>
+						<IconTabFilter id="invoiceTab" text="Invoice"
+							tooltip="Invoice" key="1">
+							<layout:Grid id="grid" vSpacing="1" hSpacing="0"
+								defaultSpan="L3 M6 S12">
+								<layout:content>
+									<HBox>
+										<VBox>
+											<Text text="From" class="boxTitle" />
+											<Label text="Admin,INC" design="Bold"></Label>
+										</VBox>
+									</HBox>
+									<HBox>
+										<VBox>
+											<Text text="To" />
+											<Label text="FRESH DIRECT LLC" design="Bold"></Label>
+										</VBox>
+									</HBox>
+									<HBox>
+										<VBox>
+											<Label text="OrderId" design="Bold"></Label>
+											<Label text="Route#" design="Bold"></Label>
+											<Label text="CHAIN#" design="Bold"></Label>
+											<Label text="CUST#" design="Bold"></Label>
+											<Label text="TICKET#" design="Bold"></Label>
+										</VBox>
+									</HBox>
+								</layout:content>
+							</layout:Grid>
+							<Table id="idInvoiceTable" items="{defaultModel>marks}"
+								class="ssdTable">
+								<columns>
+									<Column hAlign="left">
+										<Label text="UNITS" design="Bold" />
+									</Column>
+									<Column hAlign="left">
+										<Label text="ITEM" design="Bold" />
+									</Column>
+									<Column hAlign="left">
+										<Label text="UPC" design="Bold" />
+									</Column>
+									<Column>
+										<Label text="Description" design="Bold" />
+									</Column>
+									<Column>
+										<Label text="RETAIL" design="Bold" />
+									</Column>
+									<Column>
+										<Label text="COST" design="Bold" />
+									</Column>
+									<Column>
+										<Label text="EXTENDED" design="Bold" />
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem id="idInvoiceTableItems">
+										<cells>
+											<Text text="{defaultModel>year1}"></Text>
+											<Text text="{defaultModel>year2}"></Text>
+											<Text text="{defaultModel>year3}"></Text>
+											<Text text="{defaultModel>year4}"></Text>
+											<Text text="{defaultModel>year5}"></Text>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+							<VBox>
+								<Label text="SubTotal" class="addMargin" design="Bold"></Label>
+								<Label text="Discount" class="addMargin" design="Bold"></Label>
+								<Label text="NYS Bottle Deposit" class="addMargin" design="Bold"></Label>
+								<Label text="Total" class="addMargin" design="Bold"></Label>
+							</VBox>
+							<Toolbar id="detailsToolbar" class="boxToolBar">
+								<Label text="Additional Details" design="Bold" />
+							</Toolbar>
+							<VBox>
+								<layout:Grid id="userGrid" vSpacing="1" hSpacing="0"
+									defaultSpan="L3 M6 S12">
+									<layout:content>
+										<VBox>
+											<Label text="Posting Date" design="Bold" class="boxClass" />
+											<Input id="postingDate" width="13rem" />
+										</VBox>
+										<VBox>
+											<Label text="Company Code" design="Bold" class="boxClass" />
+											<Input id="companyCode" width="13rem" />
+										</VBox>
+										<VBox>
+											<Label text="Currency" design="Bold" class="boxClass" />
+											<InputBase id="currency" type="Text" width="13rem" />
+										</VBox>
+										<VBox>
+											<Label text="Tax Indicator" design="Bold" class="boxClass" />
+											<InputBase id="taxindicator" type="Text" width="13rem" />
+										</VBox>
+									</layout:content>
+								</layout:Grid>
+							</VBox>
+						</IconTabFilter>
+						<IconTabFilter id="poTab" text="PO" tooltip="PO"
+							key="2">
+							<Text text="PO Tab"></Text>
+						</IconTabFilter>
+						<IconTabFilter id="grnTab" text="GRN" tooltip="GRN"
+							key="3">
+							<Text text="GRN Tab"></Text>
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+			</VBox>
+			<VBox class="BoxClass" width="98%">
+				<Toolbar id="mailDetailsToolbar">
+					<Label text="Email Details" design="Bold" />
+				</Toolbar>
+				<HBox>
+					<Text text="Linday Cartler" class="boxClass"></Text>
+					<VBox>
+						<Text text="Email Description is shown here" class="mailClass" />
+						<Image id="img1" alt="pdf" src="Images/PDF.png" class="mailClass"
+							press="onPdfRead">
+						</Image>
+					</VBox>
+				</HBox>
+			</VBox>
+			<VBox class="BoxClass" width="98%">
+				<Toolbar id="commentsDetailsToolbar">
+					<Label text="Comments" design="Bold" />
+				</Toolbar>
+				<VBox>
+					<Label text="Max" design="Bold" class="boxClass"></Label>
+					<Text text="Invoice from vendor admin has been approved"
+						class="boxClass" />
+				</VBox>
+			</VBox>
+		</content>
+	</Page>
+</core:View>

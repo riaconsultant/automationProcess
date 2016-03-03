@@ -1,0 +1,18 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="apautomation.MasterInvoice" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false">
+		<content>
+			<List id="invoiceList" items="{defaultModel>/InvoiceDetails}"
+				growing="true" growingThreshold="3">
+				<ObjectListItem title="{defaultModel>InvoiceNo}"
+					type="Active" counter="{defaultModel>Price}" class="masterListItemClass"
+					press="handleItemPress">
+					<attributes>
+						<ObjectAttribute xmlns="sap.m" text="{defaultModel>InvoiceFrom}">
+						</ObjectAttribute>
+					</attributes>
+				</ObjectListItem>
+			</List>
+		</content>
+	</Page>
+</core:View>

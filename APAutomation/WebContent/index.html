@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+
+<script
+	src="resources/sap-ui-core.js "
+	id="sap-ui-bootstrap" data-sap-ui-libs="sap.m"
+	data-sap-ui-xx-bindingSyntax="complex"
+	data-sap-ui-resourceroots='{
+				"apautomation":"./apautomation",
+				"incture.apautomation":"./"
+				}'
+	data-sap-ui-theme="sap_bluecrystal">
+	
+</script>
+<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+<script type="text/javascript">
+// 	sap.ui.localResources("fullscreenapp");
+// 	new sap.ui.core.ComponentContainer({
+// 		height : "100%",
+// 		name : "sap.ui.demo"
+// 	}).placeAt("content");
+</script>
+<script>
+	new sap.ui.core.ComponentContainer({
+		height : "100%",
+		name : "incture.apautomation"
+	}).placeAt("content");
+</script>
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+<script>
+	$.fn.scrollTo = function(target, options, callback) {
+		if (typeof options == 'function' && arguments.length == 2) {
+			callback = options;
+			options = target;
+		}
+		var settings = $.extend({
+			scrollTarget : target,
+			offsetTop : 500,
+			duration : 500,
+			easing : 'swing'
+		}, options);
+		return this
+				.each(function() {
+					var scrollPane = $(this);
+					var scrollTarget = (typeof settings.scrollTarget == "number") ? settings.scrollTarget
+							: $(settings.scrollTarget);
+					var scrollY = (typeof scrollTarget == "number") ? scrollTarget
+							: scrollTarget.offset().top
+									+ scrollPane.scrollTop()
+									- parseInt(settings.offsetTop);
+					scrollPane.animate({
+						scrollTop : scrollY
+					}, parseInt(settings.duration), settings.easing,
+							function() {
+								if (typeof callback == 'function') {
+									callback.call(this);
+								}
+							});
+				});
+	}
+</script>
+</head>
+<body class="sapUiBody" role="application">
+	<div id="content"></div>
+</body>
+</html>

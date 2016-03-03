@@ -1,0 +1,6 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+	<HBox width="100%" class="headerHboxClass"></HBox>
+	<SplitApp id="idAppControl" class="SplitApp">
+	</SplitApp>
+</mvc:View>
