@@ -21,7 +21,7 @@
 				<IconTabBar id="iconTabBar" expandable="false"
 					showSelection="false">
 					<items>
-						<IconTabFilter id="invoiceTab" text="Invoice"
+						<IconTabFilter id="invoiceTab" text="Invoice:{/sapInvoiceNumber}"
 							tooltip="Invoice" key="1">
 							<layout:Grid id="grid" vSpacing="1" hSpacing="0"
 								defaultSpan="L3 M6 S12">
@@ -29,18 +29,28 @@
 									<HBox>
 										<VBox>
 											<Text text="From" class="boxTitle" />
-											<Label text="Admin,INC" design="Bold"></Label>
+											<Label text="{/0/line1}"  design="Bold" />
+											<Label text="{/0/line2}"  />
+											<Label text="{/0/lin3}"  />
+											<Label text="{/0/phone}"  />
+											<Label text="{/0/fax}"  />
+											<Label text="{/0/email}"  />
 										</VBox>
 									</HBox>
 									<HBox>
 										<VBox>
 											<Text text="To" />
-											<Label text="FRESH DIRECT LLC" design="Bold"></Label>
+											<Label text="{/1/line1}" design="Bold" />
+											<Label text="{/1/line2}"  />
+											<Label text="{/1/lin3}"  />
+											<Label text="{/1/phone}"  />
+											<Label text="{/1/fax}"  />
+											<Label text="{/1/email}"  />
 										</VBox>
 									</HBox>
 									<HBox>
 										<VBox>
-											<Label text="OrderId" design="Bold"></Label>
+											<Label text="{/}" design="Bold"></Label>
 											<Label text="Route#" design="Bold"></Label>
 											<Label text="CHAIN#" design="Bold"></Label>
 											<Label text="CUST#" design="Bold"></Label>
@@ -75,55 +85,120 @@
 									</Column>
 								</columns>
 								<items>
-									<ColumnListItem id="idInvoiceTableItems">
+									<ColumnListItem  >
 										<cells>
-											<Text text="{defaultModel>year1}"></Text>
-											<Text text="{defaultModel>year2}"></Text>
-											<Text text="{defaultModel>year3}"></Text>
-											<Text text="{defaultModel>year4}"></Text>
-											<Text text="{defaultModel>year5}"></Text>
+											<Text text="{defaultModel>itemSerialNumber}"></Text>
+											<Text text="{defaultModel>itemId}"></Text>
+											<Text text="{defaultModel>upcCode}"></Text>
+											<Text text="{defaultModel>materialDescription}" />
+											<Input text="{defaultModel>quantityInitial}" />
+											<Input text="{defaultModel>uom}" />
+											<Input text="{defaultModel>unitPrice}" />
+											<Input text="{defaultModel>netPriceInitial}" />
 										</cells>
 									</ColumnListItem>
 								</items>
 							</Table>
 							<VBox>
-								<Label text="SubTotal" class="addMargin" design="Bold"></Label>
-								<Label text="Discount" class="addMargin" design="Bold"></Label>
-								<Label text="NYS Bottle Deposit" class="addMargin" design="Bold"></Label>
-								<Label text="Total" class="addMargin" design="Bold"></Label>
+								<Label text="{/subTotal}" class="addMargin" design="Bold"></Label>
+								<Label text="{/discount}" class="addMargin" design="Bold"></Label>
+								<Label text="{/total}" class="addMargin" design="Bold"></Label>
 							</VBox>
-							<Toolbar id="detailsToolbar" class="boxToolBar">
+							<Toolbar   class="boxToolBar">
 								<Label text="Additional Details" design="Bold" />
 							</Toolbar>
 							<VBox>
-								<layout:Grid id="userGrid" vSpacing="1" hSpacing="0"
+								<layout:Grid   vSpacing="1" hSpacing="0"
 									defaultSpan="L3 M6 S12">
 									<layout:content>
 										<VBox>
 											<Label text="Posting Date" design="Bold" class="boxClass" />
-											<Input id="postingDate" width="13rem" />
+											<Input value="{/postingDate}" width="13rem" />
 										</VBox>
 										<VBox>
 											<Label text="Company Code" design="Bold" class="boxClass" />
-											<Input id="companyCode" width="13rem" />
+											<Input value="{/companyCode}" width="13rem" />
 										</VBox>
 										<VBox>
 											<Label text="Currency" design="Bold" class="boxClass" />
-											<InputBase id="currency" type="Text" width="13rem" />
+											<InputBase value="{/currency}" type="Text" width="13rem" />
 										</VBox>
 										<VBox>
 											<Label text="Tax Indicator" design="Bold" class="boxClass" />
-											<InputBase id="taxindicator" type="Text" width="13rem" />
+											<InputBase value="{/taxIndicator}" type="Text" width="13rem" />
 										</VBox>
 									</layout:content>
 								</layout:Grid>
 							</VBox>
 						</IconTabFilter>
-						<IconTabFilter id="poTab" text="PO" tooltip="PO"
-							key="2">
-							<Text text="PO Tab"></Text>
+						<IconTabFilter text="PO Number:{poNumber}" tooltip="PO" key="2">
+							<layout:Grid   vSpacing="1" hSpacing="0"
+								defaultSpan="L3 M6 S12">
+								<layout:content>
+									<HBox>
+										<VBox>
+											
+										</VBox>
+									</HBox>
+									<HBox>
+										<VBox>
+											
+										</VBox>
+									</HBox>
+									<HBox>
+										<VBox>
+											<Label text="Company:{/compCode}" design="Bold"></Label>
+											<Label text="PO Number{/poNumber}" design="Bold"></Label>
+											<Label text="Request Id:{/requestID}" design="Bold"></Label>
+											<Label text="Vendor:{/vendor}" design="Bold"></Label>
+											<Label text="Currency:{/currency}" design="Bold"></Label>
+											<Label text="Exchange Rate:{/exchRate}" design="Bold"></Label>
+											<Label text="pmnttrms:{/pmnttrms}" design="Bold"></Label>
+										</VBox>
+									</HBox>
+								</layout:content>
+							</layout:Grid>
+							<Table  items="{defaultModel>marks}"
+								class="ssdTable">
+								<columns>
+									<Column hAlign="left">
+										<Label text="UNITS" design="Bold" />
+									</Column>
+									<Column hAlign="left">
+										<Label text="ITEM" design="Bold" />
+									</Column>
+									<Column hAlign="left">
+										<Label text="UPC" design="Bold" />
+									</Column>
+									<Column>
+										<Label text="Description" design="Bold" />
+									</Column>
+									<Column>
+										<Label text="RETAIL" design="Bold" />
+									</Column>
+									<Column>
+										<Label text="COST" design="Bold" />
+									</Column>
+									<Column>
+										<Label text="EXTENDED" design="Bold" />
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem  >
+										<cells>
+											<Text text="{defaultModel>id}"></Text>
+											<Text text="{defaultModel>poItem}"></Text>
+											<Text text="{defaultModel>matnr}" />
+											<Text text="{defaultModel>shortText}"></Text>
+											<Text text="{defaultModel>vendMat}" />
+											<Text text="{defaultModel>quantity}" />
+											<Text text="{defaultModel>netPrice}" />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
 						</IconTabFilter>
-						<IconTabFilter id="grnTab" text="GRN" tooltip="GRN"
+						<IconTabFilter   text="GRN" tooltip="GRN"
 							key="3">
 							<Text text="GRN Tab"></Text>
 						</IconTabFilter>
@@ -131,14 +206,14 @@
 				</IconTabBar>
 			</VBox>
 			<VBox class="BoxClass" width="98%">
-				<Toolbar id="mailDetailsToolbar">
+				<Toolbar >
 					<Label text="Email Details" design="Bold" />
 				</Toolbar>
 				<HBox>
-					<Text text="Linday Cartler" class="boxClass"></Text>
+					<Text text="{/emailFrom}" class="boxClass"></Text>
 					<VBox>
-						<Text text="Email Description is shown here" class="mailClass" />
-						<Image id="img1" alt="pdf" src="Images/PDF.png" class="mailClass"
+						<Text text="{/emailSubject}" class="mailClass" />
+						<Image id="img1" alt="pdf" src="{/fileB64}" class="mailClass"
 							press="onPdfRead">
 						</Image>
 					</VBox>
@@ -149,8 +224,13 @@
 					<Label text="Comments" design="Bold" />
 				</Toolbar>
 				<VBox>
-					<Label text="Max" design="Bold" class="boxClass"></Label>
-					<Text text="Invoice from vendor admin has been approved"
+					<Label text="Reviewer Comment" design="Bold" class="boxClass"></Label>
+					<Text text="{/reviewerComment}"
+						class="boxClass" />
+				</VBox>
+				<VBox>
+					<Label text="Approver Comment" design="Bold" class="boxClass"></Label>
+					<Text text="{/approverComment}"
 						class="boxClass" />
 				</VBox>
 			</VBox>

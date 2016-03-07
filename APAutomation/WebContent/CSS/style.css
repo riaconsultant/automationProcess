@@ -1,119 +1,263 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans');
-
-/* Top purple tabular bar*/
-.headerHboxClass {
-	background: url('../Images/header_bg.png');
-	height: 65px;
-}
-
-/* Back ground colour change */
-.SplitApp .sapMSplitContainerDetail {
-	background: #f2f2f2;
-	border-left: 0px;
-}
-
-.SplitApp .sapMSplitContainerMaster {
-	background: #f2f2f2;
-}
-
-.sapMSplitContainerMaster:after {
-	border: none;
-}
-
-.sapMSplitContainerMaster:before {
-	border: none;
-}
-
-.sapMLIB {
+.launcherToolbarClass{
 	background: transparent !important;
-	border-bottom: 0px;
+    border-bottom: 0px !important;
+    padding: 20px;
 }
 
-.sapMLIB.sapMLIBSelected {
-	background: #D4D5FE !important;
+.sapMPageHeader::before {
+	border-top: transparent;
 }
 
-.sapMSLIImg, .sapMSLIImgFirst {
-	margin: 0.5rem 0.75rem 0.5rem 0rem;
-	height: 1.5rem;
-	width: 1.5rem;
+.launcherLogoClass{
+	color: white;
+    margin-left: 2.1rem;
+    font-family: Helvetica Neue, Open Sans, Arial, sans-serif !important;
+    font-size: 20px;
+    font-weight: 100;
 }
 
-.addMargin{
-	margin-left :60%;
+.launcherBodyClass{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
 }
 
-.boxClass{
-	margin-left :3rem;
-	padding-top :0.8rem;
+.launcherHeaderBtnClass .sapMBtnInner {
+	color: #545454;
+	font-family: Helvetica Neue, Open Sans, Arial, sans-serif;
 }
 
-.textBox{
-	margin-left :3rem;
+.searchFldClass{
+	width: 20%;
+	margin-right: 2rem;
 }
 
-.hboxClass{
-	padding-bottom :2rem;
+.searchFldClass .sapMSFF{
+	background: transparent;
 }
 
-.tableHeader th{
-	background-color :white!important;
+.scrollContaninerClass .sapMScrollContScroll{
+	padding-top: 2rem;	
 }
 
-.BoxClass {
-	background: #fff;
-	margin-bottom: 20px;
-	margin-right: 2px;
-	margin-left: 2px;
-	box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
-	padding-bottom : 5rem;
+.launcherPanelFont .sapMPanelHdr{
+	font-family: Helvetica Neue, Open Sans, Arial, sans-serif !important;
+	font-size: 22px;
+	color: #fff;
+	font-weight: 100;
+	padding-left: 2rem !important;
 }
 
-.BoxClassMargin {
-	background: #fff;
-	margin-bottom: 20px;
-	margin-right: 20px;
-	margin-left: 2px;
-	box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+.sapSuiteGTHdrContent.S {
+	height: 0px !important;
+	margin-top: 0rem !important;
 }
 
-.ssdTable .sapMListTbl th {
+.sapSuiteTileCntContent.S {
+	height: 8.5rem !important;
+	margin-bottom: 0.25rem;
+	margin-top: 0.25rem;
+	line-height: 3.5rem;
+}
+
+.tileLeftContent {
+	width: 80%;
+}
+
+.tileRightContent {
+	width: 20%;
+	background: #25BCF7;
+}
+
+.sapSuiteTileCnt.S.ft-Auto {
+	height: 142px !important;
+	border: none !important;
+}
+
+.iconCLass {
+	padding-top: 40%;
+	padding-left: 14px;
+}
+
+.tileFirstbl {
+	font-family: Helvetica Neue, Open Sans, Arial, sans-serif !important;
+	font-size: 18px;
+	font-weight: 100;
+}
+
+.tileSecondLbl {
+	margin-bottom: 25px;
+	font-family: Helvetica Neue, Open Sans, Arial, sans-serif !important;
+	font-size: 15px;
+	font-weight: 100;
+}
+
+.tileThirdLbl {
+	margin-bottom: 25px;
+	font-family: Helvetica Neue, Open Sans, Arial, sans-serif !important;
+	font-size: 13px;
+	font-weight: 100;
+}
+
+.myCustomTile {
+	width: 23.5rem;
+	height: 11rem;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+	background-color: #ffffff;
+	margin: 0.5rem;
+}
+
+.sapSuiteGT {
+	display: inline-block;
+	overflow: hidden;
+	background: #ffffff;
+	border-radius: 4px;
+	position: relative;
+	border: none !important;
+	outline: none;
+}
+
+.launcherPanelFont .sapMPanelBG {
+	background-color: transparent;
+	margin-left: 20px;
+}
+
+.launcherPanelFont .sapMPanelContent {
+	border-bottom: 0px solid transparent;
+}
+
+.launcherPanelFont .sapMPanelBGTranslucent{
+	background-color: transparent;
+	margin-left: 8px;
+}
+
+.launcherPanelFont .sapMPanelHdr{
+	border-bottom: 0px !important;
+}
+
+.tileTextColorRed{
+	color: red !important
+}
+
+.tileTextColorGray{
+	color: #666666 !important
+}
+
+.tileBgColorRed{
+	background: red !important;
+}
+
+.tileBgColorWhite{
 	background: #fff !important;
+}
+
+.sapMSplitContainerMaster{
+	width: 280px;	
+}
+
+.masterToolbarClass{
+	background-color: transparent !important;
+    border-bottom: 0px !important;
+    padding: 20px;
+}
+
+.navBgColorGray{
+	background-color: #444443 !important;
+}
+
+.navBgColorWhite{
+	background-color: #fff !important;
+}
+
+.masterListClass{
+	margin-top: 2rem;	
+}
+
+.listItemClass {
+	background-color: transparent !important;
+}
+
+.listItemClass2 .sapMSLIInfoNone {
+	display: none;
+}
+
+.listItemSelectColorRed {
+	background: #B81D46 !important;
+}
+
+.listItemSelectColorWhite {
+	background: #fff !important;
+}
+
+.listItemClass.active {
+	background: #B81D46 !important;
+}
+
+.listItemClass .sapMSLITitleOnly {
+	font-weight: normal;
+	font-size: 16px;
+	font-family: Helvetica Neue, Open Sans, Arial, sans-serif !important;
+}
+
+.listTxtColorRed .sapMSLITitleOnly {
+	color: red;
+}
+
+.listTxtColorRed .sapMListHdr {
+	color: #fff !important;
+	font-family: Helvetica Neue, Open Sans, Arial, sans-serif !important;
+	border-bottom: 0px !important;
+}
+
+.listTxtColorGray .sapMSLITitleOnly {
+	color: gray;
+}
+
+.listTxtColorGray .sapMListHdr {
+	color: #fff !important;
+	font-family: Helvetica Neue, Open Sans, Arial, sans-serif !important;
+	border-bottom: 0px !important;
+}
+
+.listTxtColorWhite .sapMSLITitleOnly {
+	color: #fff;
+}
+
+.listTxtColorWhite .sapMListHdr {
+	color: #fff !important;
+	font-family: Helvetica Neue, Open Sans, Arial, sans-serif !important;
+	border-bottom: 0px !important;
+}
+
+.detailHdrBgColor{
+	background: #F9F8F8 !important;
+}
+
+.detailHdrBarText{
+	font-family: Helvetica Neue, Open Sans, Arial, sans-serif !important;
+	font-size: 16px !important;
 	font-weight: bold !important;
 }
 
-.ssdTable {
-	width: 100% !important;
-	/*box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);*/
-	padding: 0 !important;
-	background: #fff;
+.detailHdrTxtColor{
+	color: #B81D46 !important;
 }
 
-.ssdTable .sapMListTbl .sapMText {
-	font-family: Open Sans !important;
-	font-size: 0.75rem;
+.detailBgColor{
+	background: #fff !important;
 }
 
-.ssdTableItem {
-	border-bottom: .1em solid #f5f5f5;
-	padding: .8em;
+.toolbarClass {
+	margin-bottom: 0.5rem !important;
+	border-bottom: transparent !important;
 }
 
-.masterListItemClass .sapMLIBCounter {
-	font-size: 0.875rem;
-	padding: 4px;
-	/*background: #ed8e3f;*/
-	text-align: center !important;
-	border-radius: 2px;
-	/*box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);*/
-	color: #333;
+.searchFieldClass .sapMSFF{
+	border-radius: 3px;
 }
 
-.mailClass{
-	margin-left:25rem;
-	padding-top :0.8rem;
-}
-
-.editClass{
-	width :4rem!important;
+.sapMPanelBGTranslucent {
+    background-color: rgba(255, 255, 255, 0.03);
 }

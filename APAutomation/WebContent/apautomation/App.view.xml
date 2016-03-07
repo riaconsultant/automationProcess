@@ -1,6 +1,4 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
 	xmlns="sap.m">
-	<HBox width="100%" class="headerHboxClass"></HBox>
-	<SplitApp id="idAppControl" class="SplitApp">
-	</SplitApp>
+	<SplitApp id="idAppControl" mode="{path: '/mainLayoutConf/leftNavVis', formatter: 'incture.apautomation.util.formatter.masterVisible'}"/>
 </mvc:View>

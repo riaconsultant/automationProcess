@@ -1,0 +1,119 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+
+/* Top purple tabular bar*/
+.headerHboxClass {
+	background: url('../Images/header_bg.png');
+	height: 65px;
+}
+
+/* Back ground colour change */
+.SplitApp .sapMSplitContainerDetail {
+	background: #f2f2f2;
+	border-left: 0px;
+}
+
+.SplitApp .sapMSplitContainerMaster {
+	background: #f2f2f2;
+}
+
+.sapMSplitContainerMaster:after {
+	border: none;
+}
+
+.sapMSplitContainerMaster:before {
+	border: none;
+}
+
+.sapMLIB {
+	background: transparent !important;
+	border-bottom: 0px;
+}
+
+.sapMLIB.sapMLIBSelected {
+	background: #D4D5FE !important;
+}
+
+.sapMSLIImg, .sapMSLIImgFirst {
+	margin: 0.5rem 0.75rem 0.5rem 0rem;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.addMargin{
+	margin-left :60%;
+}
+
+.boxClass{
+	margin-left :3rem;
+	padding-top :0.8rem;
+}
+
+.textBox{
+	margin-left :3rem;
+}
+
+.hboxClass{
+	padding-bottom :2rem;
+}
+
+.tableHeader th{
+	background-color :white!important;
+}
+
+.BoxClass {
+	background: #fff;
+	margin-bottom: 20px;
+	margin-right: 2px;
+	margin-left: 2px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+	padding-bottom : 5rem;
+}
+
+.BoxClassMargin {
+	background: #fff;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 2px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+}
+
+.ssdTable .sapMListTbl th {
+	background: #fff !important;
+	font-weight: bold !important;
+}
+
+.ssdTable {
+	width: 100% !important;
+	/*box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);*/
+	padding: 0 !important;
+	background: #fff;
+}
+
+.ssdTable .sapMListTbl .sapMText {
+	font-family: Open Sans !important;
+	font-size: 0.75rem;
+}
+
+.ssdTableItem {
+	border-bottom: .1em solid #f5f5f5;
+	padding: .8em;
+}
+
+.masterListItemClass .sapMLIBCounter {
+	font-size: 0.875rem;
+	padding: 4px;
+	/*background: #ed8e3f;*/
+	text-align: center !important;
+	border-radius: 2px;
+	/*box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);*/
+	color: #333;
+}
+
+.mailClass{
+	margin-left:25rem;
+	padding-top :0.8rem;
+}
+
+.editClass{
+	width :4rem!important;
+}
