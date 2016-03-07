@@ -1,0 +1,152 @@
+{
+  	"templateName" : "SearchList",
+	"reportId" : "ledgerReport",
+	"reportName" : "Ledger Report",
+	"inputAction" : {
+		"displayText" : "Search",
+		"componentType" : "Button",
+		"actionType" : "WebService",
+		"actionUrl" : "http://192.168.1.149:50000/ALBLReport/albl/report/search"
+	},
+	"outputAction" : {
+		"displayText" : "Raise Ticket",
+		"componentType" : "Button",
+		"color" : "Reject",
+		"actionType" : "RaiseTicket",
+		"actionUrl" : "http://115.110.70.122:50000/ALBLReport/albl/report/performAction"
+	},
+	"inputObject" : 
+	[
+			{
+				"objectId" : "fromDate",
+				"displayText" : "From Date",
+				"objectType" : "DATE",
+				"enabled" : "true",
+				"valueState" : "None",
+				"placeholder" : "Enter Date...",
+				"editable" : "true",
+				"valueStateText" : "Invalid Entry",
+				"showValueStateMessage" : "true",
+				"status" : "optional"
+			},
+			{
+				"objectId" : "toDate",
+				"displayText" : "To Date",
+				"objectType" : "DATE",
+				"enabled" : "true",
+				"valueState" : "None",
+				"placeholder" : "Enter Date...",
+				"editable" : "true",
+				"valueStateText" : "Invalid Entry",
+				"showValueStateMessage" : "true",
+				"status" : "optional"
+			},
+			{
+				"objectId" : "invoiceNumber",
+				"displayText" : "Invoice Number",
+				"objectType" : "INPUT",
+				"enabled" : "true",
+				"valueState" : "None",
+				"placeholder" : "From Date",
+				"editable" : "true",
+				"valueStateText" : "Invalid Entry",
+				"showValueStateMessage" : "true",
+				"status" : "optional"
+			},
+			{
+				"objectId" : "vendor",
+				"displayText" : "Vendor",
+				"objectType" : "INPUT",
+				"enabled" : "true",
+				"valueState" : "None",
+				"placeholder" : "From Date",
+				"editable" : "true",
+				"valueStateText" : "Invalid Entry",
+				"showValueStateMessage" : "true",
+				"status" : "optional"
+			}
+	],
+	"outputObject" : 
+		[
+			{
+				"objectId" : "checkNumber",
+				"headerText" : "Check Number",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "invoiceNumber",
+				"headerText" : "Invoice Number",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "invoiceDate",
+				"headerText" : "Invoice Date",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "documentNumber",
+				"headerText" : "Doc. Number",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "postingDate",
+				"headerText" : "Posting Date",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "businessArea",
+				"headerText" : "Business Area",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "itemText",
+				"headerText" : "Item Text",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "clearingDocumentNumber",
+				"headerText" : "Clearing Document Number",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "debitAmount",
+				"headerText" : "Debit Amount",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "creditAmount",
+				"headerText" : "Credit Amount",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "dueDate",
+				"headerText" : "Due Date",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "totalAmount",
+				"headerText" : "Total Amount",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "openingBalance",
+				"headerText" : "Opening Balance",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "closingBalance",
+				"headerText" : "Closing Balance",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "vendorCode",
+				"headerText" : "Vendor",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "icon",
+				"headerText" : "",
+				"objectType" : "Image"	
+			}
+		]
+}

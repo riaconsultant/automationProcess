@@ -1,0 +1,22 @@
+{
+	"tile1" : [ 
+		{"Country": "Netherlands", "revenue": 470.2, "profit": 217.29},
+		{"Country": "Poland", "revenue": 170.93, "profit": 117.00},
+		{"Country": "Danemark", "revenue": 905.08, "profit": 609.16},
+		{"Country": "Sweden", "revenue": 410.87, "profit": 141.25}
+	 ],
+	 "tile2" : [ 
+		{"Country": "Netherlands", "revenue": 470.2, "profit": 217.29},
+		{"Country": "Poland", "revenue": 170.93, "profit": 117.00},
+		{"Country": "Danemark", "revenue": 905.08, "profit": 609.16},
+		{"Country": "Sweden", "revenue": 410.87, "profit": 141.25},
+		{"Country": "India", "revenue": 470.2, "profit": 217.29},
+		{"Country": "USA", "revenue": 170.93, "profit": 117.00},
+		{"Country": "US", "revenue": 905.08, "profit": 609.16},
+		{"Country": "UK", "revenue": 410.87, "profit": 141.25},
+		{"Country": "UAE", "revenue": 470.2, "profit": 217.29},
+		{"Country": "WA", "revenue": 410.87, "profit": 141.25}
+	 ],
+	 "customListItem" : [{"category":"In Process Invoice","desc":"developer", "status":"12"},
+	  {"category": "Failed Invoice","desc":"lead", "status":"4"}]
+}

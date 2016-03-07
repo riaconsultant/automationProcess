@@ -1,0 +1,95 @@
+{
+  	"templateName" : "SearchList",
+	"reportId" : "otifReport",
+	"reportName" : "OTIF Report",
+	"inputAction" : {
+		"displayText" : "Search",
+		"componentType" : "Button",
+		"actionType" : "WebService",
+		"actionUrl" : "http://192.168.1.149:50000/ALBLReport/albl/report/search"
+	},
+	"outputAction" : {
+		"displayText" : "Raise Ticket",
+		"componentType" : "Button",
+		"color" : "Reject",
+		"actionType" : "RaiseTicket",
+		"actionUrl" : "http://115.110.70.122:50000/ALBLReport/albl/report/performAction"
+	},
+	"inputObject" : 
+	[
+			{
+				"objectId" : "fromDate",
+				"displayText" : "From Date",
+				"objectType" : "DATE",
+				"enabled" : "true",
+				"valueState" : "None",
+				"placeholder" : "Enter Date...",
+				"editable" : "true",
+				"valueStateText" : "Invalid Entry",
+				"showValueStateMessage" : "true",
+				"status" : "optional"
+			},
+			{
+				"objectId" : "toDate",
+				"displayText" : "To Date",
+				"objectType" : "DATE",
+				"enabled" : "true",
+				"valueState" : "None",
+				"placeholder" : "Enter Date...",
+				"editable" : "true",
+				"valueStateText" : "Invalid Entry",
+				"showValueStateMessage" : "true",
+				"status" : "optional"
+			},
+			{
+				"objectId" : "vendor",
+				"displayText" : "Vendor",
+				"objectType" : "INPUT",
+				"enabled" : "true",
+				"valueState" : "None",
+				"placeholder" : "From Date",
+				"editable" : "true",
+				"valueStateText" : "Invalid Entry",
+				"showValueStateMessage" : "true",
+				"status" : "optional"
+			}
+	],
+	"outputObject" : 
+		[
+			{
+				"objectId" : "poNumber",
+				"headerText" : "PO Number",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "poQuantity",
+				"headerText" : "PO Qty.",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "grnQuantity",
+				"headerText" : "GRN Qty.",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "grnDate",
+				"headerText" : "GRN Date",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "otifPercentage",
+				"headerText" : "OTIF %",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "vendorCode",
+				"headerText" : "Vendor",
+				"objectType" : "String"	
+			},
+			{
+				"objectId" : "icon",
+				"headerText" : "",
+				"objectType" : "Image"	
+			}
+		]
+}

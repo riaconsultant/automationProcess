@@ -1,0 +1,42 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:suite="sap.suite.ui.commons" xmlns:layout="sap.ui.layout"
+	xmlns:viz="sap.viz.ui5.controls" controllerName="apautomation.LaunchScreen"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="launcherPage" class="launcherBodyClass">
+		<customHeader>
+			<Toolbar class="launcherToolbarClass">
+				<content>
+					<Image src="{/launchpadConf/logo}" height="40px" class="launcherLogoClass"></Image>
+					<ToolbarSpacer></ToolbarSpacer>
+					<SearchField visible="{/launchpadConf/isSearchable}"
+						class="searchFldClass"></SearchField>
+					<Button icon="sap-icon://account" text="Username" type="Transparent"
+						class="launcherHeaderBtnClass" press="onLogoutPress"></Button>
+				</content>
+			</Toolbar>
+		</customHeader>
+		<content>
+
+			<IconTabBar applyContentPadding="false" expanded="true"
+				id="idIconTabBar" select="handleIconTabBarSelect">
+				<items>
+					<IconTabFilter icon="sap-icon://begin" iconColor="Positive"
+						text="Hotspot Invoice template" key="Ok" />
+					<IconTabFilter icon="sap-icon://compare" iconColor="Critical"
+						text="View templates" key="Heavy" />
+					<IconTabFilter icon="sap-icon://inventory" iconColor="Negative"
+						text="View task" key="Overweight" />
+					<IconTabFilter icon="sap-icon://inventory" iconColor="Negative"
+						text="Setting" key="Overweight" />
+				</items>
+			</IconTabBar>
+			
+			<Panel id="scrollContainer" >
+				<content>
+				</content>
+			</Panel>
+		</content>
+	</Page>
+	<viz:VizFrame>
+	</viz:VizFrame>
+</core:View>

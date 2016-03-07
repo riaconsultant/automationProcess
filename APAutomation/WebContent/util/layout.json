@@ -1,0 +1,22 @@
+{
+	"launchpadConf" : {
+		"backgroundImage" : "util/blurred-background-86.jpg",
+		"logo" : "util/albl_logo.png",
+		"isSearchable" : false,
+		"tileBgColor" : "tileBgColorWhite",
+		"tileArrowColor" : "white",
+		"tileTextColor" : "tileTextColorGray"
+	},
+	"mainLayoutConf" : {
+		"leftNavVis" : true,
+		"isLogoVis" : true,
+		"logoImg" : "util/albl_logo.png",
+		"homeIconColor" : "white",
+		"navBgColor" : "navBgColorGray",
+		"navTextColor" : "listTxtColorWhite",
+		"navHighlightColor" : "listItemSelectColorRed",
+		"headerBgColor" : "detailHdrBgColor",
+		"headerTextColor" : "detailHdrTxtColor",
+		"detailBgColor" : "detailBgColor"
+	}
+}
