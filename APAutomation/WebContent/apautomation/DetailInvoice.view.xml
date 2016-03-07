@@ -226,7 +226,7 @@
 				<VBox>
 					<Label text="Reviewer Comment" design="Bold" class="boxClass"></Label>
 					<Text text="{/reviewerComment}"
-						class="boxClass" />
+						class="boxClass" /> 
 				</VBox>
 				<VBox>
 					<Label text="Approver Comment" design="Bold" class="boxClass"></Label>
